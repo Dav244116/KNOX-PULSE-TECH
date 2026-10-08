@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KNOX PULSE TECH</title>
+
+  <meta
+    name="description"
+    content="KNOX PULSE TECH — Cyber Terminal Interface"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Animated binary background -->
+  <div class="binary-bg" id="binaryBg"></div>
+
+  <!-- Scanline effect -->
+  <div class="scanlines"></div>
+
+  <!-- =========================
+       ACCESS GATE
+  ========================== -->
+  <main id="gateScreen" class="screen">
+
+    <section class="gate-card">
+
+      <div class="logo">
+        <span class="logo-symbol">◆</span>
+        <span class="green">KNOX</span><span class="red">PULSE</span><span class="green">TECH</span>
+      </div>
+
+      <div class="subtitle">
+        ADVANCED CYBER TERMINAL — V1.0
+      </div>
+
+      <div class="terminal-warning">
+        <div class="warning-title">
+          &gt; AUTHENTICATION REQUIRED
+        </div>
+
+        <p>
+          FOLLOW OUR COMMUNITY CHANNELS TO ACCESS THE SYSTEM.
+        </p>
+      </div>
+
+      <div class="access-box">
+
+        <div class="access-title">
+          ⚠ ACCESS RESTRICTED
+        </div>
+
+        <p>
+          Join our official WhatsApp community before entering
+          the KNOX PULSE TECH system.
+        </p>
+
+      </div>
+
+      <!-- WhatsApp Channel -->
+      <a
+        class="cyber-btn whatsapp"
+        href="https://whatsapp.com/channel/0029Vb7PdRZAzNbwS3do6K2v"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>📢</span>
+        FOLLOW WHATSAPP CHANNEL
+      </a>
+
+      <!-- WhatsApp Group -->
+      <a
+        class="cyber-btn whatsapp"
+        href="https://chat.whatsapp.com/LO0OjOJpp7YLxO8PsyQYLf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>💬</span>
+        JOIN WHATSAPP GROUP
+      </a>
+
+      <div class="divider"></div>
+
+      <button
+        id="enterSystemBtn"
+        class="cyber-btn enter-btn"
+      >
+        <span>▶</span>
+        ENTER SYSTEM
+      </button>
+
+      <div class="copyright">
+        KNOX PULSE TECH © 2026 — AUTHORIZED DEMO ACCESS
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       AUTH SCREEN
+  ========================== -->
+  <main id="authScreen" class="screen hidden">
+
+    <section class="auth-card">
+
+      <div class="logo">
+        <span class="logo-symbol">◆</span>
+        <span class="green">KNOX</span><span class="red">PULSE</span><span class="green">TECH</span>
+      </div>
+
+      <div class="subtitle">
+        OPERATOR AUTHENTICATION
+      </div>
+
+      <!-- Tabs -->
+      <div class="auth-tabs">
+
+        <button id="loginTab" class="auth-tab active">
+          LOG IN
+        </button>
+
+        <button id="signupTab" class="auth-tab">
+          SIGN UP
+        </button>
+
+      </div>
+
+
+      <!-- LOGIN -->
+      <form id="loginForm" class="auth-form">
+
+        <label>USERNAME</label>
+
+        <input
+          id="loginUsername"
+          type="text"
+          placeholder="Enter username..."
+          autocomplete="off"
+          required
+        >
+
+        <label>PASSWORD</label>
+
+        <input
+          id="loginPassword"
+          type="password"
+          placeholder="Enter password..."
+          required
+        >
+
+        <button type="submit" class="form-btn">
+          ▶ LOGIN
+        </button>
+
+      </form>
+
+
+      <!-- SIGNUP -->
+      <form id="signupForm" class="auth-form hidden">
+
+        <label>USERNAME</label>
+
+        <input
+          id="signupUsername"
+          type="text"
+          placeholder="Choose a username..."
+          autocomplete="off"
+          required
+        >
+
+        <label>PASSWORD</label>
+
+        <input
+          id="signupPassword"
+          type="password"
+          placeholder="Choose a password..."
+          required
+        >
+
+        <label>CONFIRM PASSWORD</label>
+
+        <input
+          id="confirmPassword"
+          type="password"
+          placeholder="Repeat password..."
+          required
+        >
+
+        <button type="submit" class="form-btn">
+          ▶ CREATE ACCOUNT
+        </button>
+
+      </form>
+
+
+      <div id="authMessage" class="auth-message"></div>
+
+      <div class="copyright">
+        LOCAL DEMO AUTHENTICATION — NO SERVER CREDENTIAL STORAGE
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       DASHBOARD
+  ========================== -->
+  <main id="dashboardScreen" class="screen hidden">
+
+    <section class="dashboard">
+
+      <!-- Header -->
+      <header class="dashboard-header">
+
+        <div>
+          <div class="small-label">
+            KNOX PULSE TECH
+          </div>
+
+          <h1>
+            SYSTEM <span>ONLINE</span>
+          </h1>
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+          LOGOUT
+        </button>
+
+      </header>
+
+
+      <!-- Operator -->
+      <div class="operator-card">
+
+        <div class="operator-icon">
+          ◆
+        </div>
+
+        <div>
+          <div class="small-label">
+            AUTHENTICATED OPERATOR
+          </div>
+
+          <strong id="operatorName">
+            UNKNOWN
+          </strong>
+        </div>
+
+        <div class="online-dot"></div>
+
+      </div>
+
+
+      <!-- Status Grid -->
+      <section class="status-grid">
+
+        <div class="status-card">
+          <span>NETWORK</span>
+          <strong>ONLINE</strong>
+          <small>SECURE</small>
+        </div>
+
+        <div class="status-card">
+          <span>TERMINAL</span>
+          <strong>READY</strong>
+          <small>ACTIVE</small>
+        </div>
+
+        <div class="status-card">
+          <span>SECURITY</span>
+          <strong>HIGH</strong>
+          <small>PROTECTED</small>
+        </div>
+
+      </section>
+
+
+      <!-- Community -->
+      <section class="panel">
+
+        <div class="panel-title">
+          <span>◆</span>
+          COMMUNITY ACCESS
+        </div>
+
+        <p>
+          Stay connected with KNOX PULSE TECH.
+        </p>
+
+        <div class="community-buttons">
+
+          <a
+            href="https://whatsapp.com/channel/0029Vb7PdRZAzNbwS3do6K2v"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mini-btn"
+          >
+            📢 CHANNEL
+          </a>
+
+          <a
+            href="https://chat.whatsapp.com/LO0OjOJpp7YLxO8PsyQYLf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mini-btn"
+          >
+            💬 GROUP
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- Demo Tools -->
+      <section class="panel">
+
+        <div class="panel-title">
+          <span>◆</span>
+          TERMINAL
+        </div>
+
+        <div id="terminalOutput" class="terminal-output">
+          <div>&gt; KNOX PULSE TECH SYSTEM INITIALIZED</div>
+          <div>&gt; SECURITY PROTOCOL: ACTIVE</div>
+          <div>&gt; TYPE <b>help</b> TO VIEW DEMO COMMANDS</div>
+        </div>
+
+        <form id="terminalForm" class="terminal-form">
+
+          <span>&gt;</span>
+
+          <input
+            id="terminalInput"
+            type="text"
+            placeholder="Enter demo command..."
+            autocomplete="off"
+          >
+
+        </form>
+
+      </section>
+
+
+      <!-- System Information -->
+      <section class="panel">
+
+        <div class="panel-title">
+          <span>◆</span>
+          SYSTEM INFORMATION
+        </div>
+
+        <div class="info-row">
+          <span>Platform</span>
+          <strong id="platformInfo">WEB</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Browser</span>
+          <strong id="browserInfo">DETECTING...</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Connection</span>
+          <strong id="connectionInfo">CHECKING...</strong>
+        </div>
+
+      </section>
+
+
+      <footer>
+        KNOX PULSE TECH © 2026<br>
+        AUTHORIZED DEMO ENVIRONMENT
+      </footer>
+
+    </section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+  </html>
